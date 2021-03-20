@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .search_container{
+  margin: 0 auto;
+  width: 55%;
+}
+
+.search_container #speechText{
+  width: 80%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.search_container #start{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.container{
+  width: 55%;
+  margin: 0 auto;
+  border: 0px solid black;
+  padding: 10px 0px;
+}
+
+    </style>
+</head>
+<body>
+<div class="popup" onclick="myfunction()">
+    Click me!<span>popup text....</span>
+</div>
+
+
+<!--<div class='search_container'>-->
+<!--  &lt;!&ndash; Search box&ndash;&gt;-->
+<!--  <input type='text' id='speechText' > &nbsp;-->
+<!--  <input type='button' id='start' value='Start' onclick='startRecording();'>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Search Result &ndash;&gt;-->
+<!--<div class="container"></div>-->
+
+<!--<script>-->
+<!--    var recognition = new webkitSpeechRecognition();-->
+
+<!--recognition.onresult = function(event) {-->
+<!--  var saidText = "";-->
+<!--  for (var i = event.resultIndex; i < event.results.length; i++) {-->
+<!--    if (event.results[i].isFinal) {-->
+<!--      saidText = event.results[i][0].transcript;-->
+<!--    } else {-->
+<!--      saidText += event.results[i][0].transcript;-->
+<!--    }-->
+<!--  }-->
+<!--  // Update Textbox value-->
+<!--  document.getElementById('speechText').value = saidText;-->
+
+<!--  // Search Posts-->
+<!--  searchPosts(saidText);-->
+<!--}-->
+
+<!--function startRecording(){-->
+<!--  recognition.start();-->
+<!--}-->
+
+<!--// Search Posts-->
+<!--function searchPosts(saidText){-->
+
+<!--  $.ajax({-->
+<!--    url: '/voice',-->
+<!--    type: 'post',-->
+<!--    data: {speechText: saidText},-->
+<!--    success: function(response){-->
+<!--       $('.container').empty();-->
+<!--       $('.container').append(response);-->
+<!--    }-->
+<!--  });-->
+<!--}-->
+
+<!--</script>-->
+
+
+<script>
+    function myfunction()
+    {
+    var popup = document.getElementById("mypopup");
+    popup.classList.toggle("show");
+    }
+</script>
+</body>
+</html>
